@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "..\\01-cards-sources"
+		},
+		{
+			"path": "..\\02-drag-n-drop-sources"
+		},
+		{
+			"path": "..\\03-slider-sources"
+		},
+		{
+			"path": "..\\04-board-sources"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
