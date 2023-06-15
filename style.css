@@ -50,7 +50,7 @@ li{
 	margin-bottom: 10px;
 }
 
-.home{
+a.home{
 	display: flex; 
 	justify-content: center; 
 	align-items: center;
