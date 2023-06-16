@@ -1,0 +1,91 @@
+body{
+	background: url(../imgs/bg-mono_red.png) no-repeat center, #000000;
+}
+.container-mono{
+	width: 380px;
+	margin: 0 auto;
+	padding: 177px 35px 143px;
+	position: relative;
+}
+
+.logo-mono_wrap{
+	text-align: center;
+}
+
+.btn-red{
+	padding: 16px 34px !important;
+}
+
+.logo-mono{
+	width: 193.41px;
+	height: 54.02px;
+	margin-bottom: 80px;
+}
+
+.title-mono{
+	position: relative;
+	font: normal 400 40px/43px 'Grenda', sans-serif;
+	color: #FFF6DF;
+	margin-bottom: 15px;
+}
+
+.bg-mono{
+	position: absolute;
+}
+
+
+.container-mono p{
+	max-width: 325px;
+}
+
+.p-mono_container{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.btns-mono-container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	gap: 15px;
+}
+
+@media (min-width: 760px){
+	body{
+		background: url(../imgs/bg-mono_red.webp) no-repeat center, url(../imgs/bg-mono_deco.webp) no-repeat center, #000000;
+		display: flex;	
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+	}
+	.container-mono{
+		width: auto;
+		/* padding: 228px 35px; */
+		text-align: center;
+	}
+
+	.logo-mono{
+		width: 233.33px;
+		height: 66.03px;
+		margin-bottom: 58px;
+	}
+
+	.title-mono{
+		font-size: 54px;
+		line-height: 75px;
+		margin-bottom: 20px;
+	}
+
+	.container-mono p{
+		max-width: 540px;
+	}
+
+	.btns-mono-container{
+		display: flex;
+		justify-content: center;
+	}
+}

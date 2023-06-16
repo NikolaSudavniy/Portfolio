@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arts token WP</title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.svg" />
+    <link rel="stylesheet" href="styles/arts-token.css" />
+    <link rel="stylesheet" href="styles/arts-token-wp.css" />
+  </head>
+  <body>
+    <div class="container-mono">
+      <div id="scene">
+        <div class="logo-mono_wrap" data-depth="0.3">
+          <img class="logo-mono" src="imgs/logo-mono.png" alt="" />
+        </div>
+      </div>
+      <h1 class="title-mono">
+        Welcome to ARTS TOKEN<!--<img class="bg-mono" src="../imgs/red-bg_mono.png" alt="">-->
+      </h1>
+      <div class="p-mono_container">
+        <p>
+          DAO platform, directed and governed by the community with its own
+          token. Made by and for artists and art lovers. Arts Token offers
+          unlimited possibilities and advantages than others with lowest trading
+          fees. We want to reward talent and professionalism, not financial
+          capacity. Once the token is mined, it can be put up for auction with a
+          different pair, including BNB, ETH and others.
+        </p>
+      </div>
+      <div class="btns-mono-container">
+        <a
+          href="sources/Arts-Token_whitepaper.pdf"
+          download
+          class="btn-white"
+          target="_blank"
+          >White paper</a
+        >
+        <a class="btn-red" id="connect-btn">Connect wallet</a>
+      </div>
+    </div>
+
+    <div id="wallet-modal" class="overlay">
+      <div class="modal">
+        <span>0xF9573dEDd94a09b9bbAAB15FC7119e2ED9BD678D</span>
+        <button id="copy-btn">Copy</button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+      integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/web3modal@1.9.0/dist/index.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"
+    ></script>
+    <script>
+      var scene = document.getElementById("scene");
+      var parallaxInstance = new Parallax(scene);
+
+      SmoothScroll({
+        animationTime: 1100,
+        stepSize: 75,
+        accelerationDelta: 30,
+        accelerationMax: 2,
+        keyboardSupport: true,
+        arrowScroll: 50,
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+        touchpadSupport: true,
+      });
+    </script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
