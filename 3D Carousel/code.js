@@ -28,7 +28,13 @@ function checkScreenSize() {
     rotateSpeed = -85;
     imgWidth = 80;
     imgHeight = 110;
-  } else {
+  } else if(windowWidth < 900) {
+		radius = 180;
+    autoRotate = true;
+    rotateSpeed = -85;
+    imgWidth = 100;
+    imgHeight = 150;
+	} else {
     radius = 300;
     autoRotate = true;
     rotateSpeed = -85;
