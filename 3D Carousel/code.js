@@ -19,6 +19,42 @@ var ground = document.querySelector('.ground');
 ground.style.width = radius * 3 + "px";
 ground.style.height = radius * 3 + "px";
 
+function checkScreenSize() {
+  // Получение ширины окна браузера
+  var windowWidth = window.innerWidth;
+
+  // Проверка размера экрана и изменение значений переменных при необходимости
+  if (windowWidth < 600) {  // Пример: маленький экран
+    radius = 140;
+    autoRotate = true;
+    rotateSpeed = -85;
+    imgWidth = 80;
+    imgHeight = 110;
+  } else {
+    // Возвращение исходных значений для больших экранов
+    radius = 300;
+    autoRotate = true;
+    rotateSpeed = -85;
+    imgWidth = 140;
+    imgHeight = 190;
+  }
+
+  // Применение изменений к элементам на странице
+  spin.style.width = imgWidth + "px";
+  spin.style.height = imgHeight + "px";
+  ground.style.width = radius * 3 + "px";
+  ground.style.height = radius * 3 + "px";
+  init(1);
+}
+
+// Вызов функции для проверки размера экрана при загрузке страницы
+checkScreenSize();
+
+// Проверка размера экрана при изменении окна браузера
+window.addEventListener('resize', function() {
+  checkScreenSize();
+});
+
 function init(delayTime) {
   for (var i = 0; i < media.length; i++) {
     media[i].style.transform = "rotateY(" + (i * (360 / media.length)) + "deg) translateZ(" + radius + "px)";
