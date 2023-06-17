@@ -148,9 +148,9 @@ function zoomOnClick() {
           spin.classList.remove('paused');
         } else {
           img.style.transition = 'width 0.3s, height 0.3s, left 0.3s, top 0.3s';
-          img.style.width = (origImgWidth + 100) + 'px';
+          img.style.width = (origImgWidth + 70) + 'px';
           img.style.height = (origImgHeight + 100) + 'px';
-          img.style.left = (origImgLeft - 50) + 'px';
+          img.style.left = (origImgLeft - 35) + 'px';
           img.style.top = (origImgTop - 100) + 'px';
           autoRotate = false;
           spin.classList.add('paused');
