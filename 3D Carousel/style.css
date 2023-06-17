@@ -41,6 +41,11 @@ body {
 
 .gallery-item{
 	border-radius: 2px;
+	transition: 0.5s;
+}
+
+.paused {
+  animation-play-state: paused !important;
 }
 
 .drag-container .gallery-item,

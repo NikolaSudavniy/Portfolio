@@ -24,20 +24,14 @@ function checkScreenSize() {
 
   if (windowWidth < 400) {
     radius = 140;
-    autoRotate = true;
-    rotateSpeed = -85;
     imgWidth = 80;
     imgHeight = 110;
   } else if(windowWidth < 750) {
 		radius = 180;
-    autoRotate = true;
-    rotateSpeed = -85;
     imgWidth = 100;
     imgHeight = 150;
 	} else {
     radius = 300;
-    autoRotate = true;
-    rotateSpeed = -85;
     imgWidth = 140;
     imgHeight = 190;
   }
@@ -90,12 +84,12 @@ if (autoRotate) {
 
 document.onpointerdown = function (e) {
   clearInterval(drag.timer);
-  e = e || window.event;
+  e = e || window.e;
   var sX = e.clientX,
       sY = e.clientY;
 
   this.onpointermove = function (e) {
-    e = e || window.event;
+    e = e || window.e;
     var nX = e.clientX,
         nY = e.clientY;
     desX = nX - sX;
@@ -127,8 +121,45 @@ document.onpointerdown = function (e) {
 };
 
 document.onmousewheel = function(e) {
-  e = e || window.event;
+  e = e || window.e;
   var d = e.wheelDelta / 20 || -e.detail;
   radius += d;
   init(1);
 };
+
+function zoomOnClick() {
+  for (var i = 0; i < imgs.length; i++) {
+    (function(index) {
+      var img = imgs[index];
+      var origImgWidth = img.offsetWidth;
+      var origImgHeight = img.offsetHeight;
+      var origImgLeft = img.offsetLeft;
+      var origImgTop = img.offsetTop;
+      var isZoomed = false;
+      var initialAutoRotate = autoRotate;
+
+      img.addEventListener('click', function() {
+        if (isZoomed) {
+          img.style.width = origImgWidth + 'px';
+          img.style.height = origImgHeight + 'px';
+          img.style.left = origImgLeft + 'px';
+          img.style.top = origImgTop + 'px';
+          autoRotate = initialAutoRotate;
+          spin.classList.remove('paused');
+        } else {
+          img.style.transition = 'width 0.3s, height 0.3s, left 0.3s, top 0.3s';
+          img.style.width = (origImgWidth + 100) + 'px';
+          img.style.height = (origImgHeight + 100) + 'px';
+          img.style.left = (origImgLeft - 50) + 'px';
+          img.style.top = (origImgTop - 100) + 'px';
+          autoRotate = false;
+          spin.classList.add('paused');
+        }
+
+        isZoomed = !isZoomed;
+      });
+    })(i);
+  }
+}
+
+zoomOnClick();
