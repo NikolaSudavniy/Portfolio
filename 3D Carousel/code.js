@@ -22,13 +22,13 @@ ground.style.height = radius * 3 + "px";
 function checkScreenSize() {
   var windowWidth = window.innerWidth;
 
-  if (windowWidth < 600) {
+  if (windowWidth < 400) {
     radius = 140;
     autoRotate = true;
     rotateSpeed = -85;
     imgWidth = 80;
     imgHeight = 110;
-  } else if(windowWidth < 900) {
+  } else if(windowWidth < 750) {
 		radius = 180;
     autoRotate = true;
     rotateSpeed = -85;
