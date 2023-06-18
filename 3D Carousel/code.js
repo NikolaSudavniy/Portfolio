@@ -1,10 +1,11 @@
 var radius = 300;
 var autoRotate = true;
 var rotateSpeed = -85;
-var imgWidth = 140;
+var imgWidth = 130;
 var imgHeight = 190;
+var initiation = false;
 
-setTimeout(init, 2000);
+setTimeout(init, 1000);
 
 var drag = document.querySelector('.drag-container');
 var spin = document.querySelector('.spin-container');
@@ -32,7 +33,7 @@ function checkScreenSize() {
     imgHeight = 150;
 	} else {
     radius = 300;
-    imgWidth = 140;
+    imgWidth = 130;
     imgHeight = 190;
   }
 
@@ -40,7 +41,7 @@ function checkScreenSize() {
   spin.style.height = imgHeight + "px";
   ground.style.width = radius * 3 + "px";
   ground.style.height = radius * 3 + "px";
-  init(1);
+  if(initiation) init(0.2)
 }
 
 checkScreenSize();
@@ -55,6 +56,7 @@ function init(delayTime) {
     media[i].style.transition = "transform 1s";
     media[i].style.transitionDelay = delayTime || (media.length - i) / 4 + "s";
   }
+	initiation = true;
 }
 
 function applyTranform(obj) {
@@ -128,8 +130,7 @@ document.onmousewheel = function(e) {
 };
 
 function zoomOnClick() {
-  for (var i = 0; i < imgs.length; i++) {
-    (function(index) {
+  for (var i = 0; i < imgs.length; i++) {(function(index) {
       var img = imgs[index];
       var origImgWidth = img.offsetWidth;
       var origImgHeight = img.offsetHeight;
@@ -139,6 +140,7 @@ function zoomOnClick() {
       var initialAutoRotate = autoRotate;
 
       img.addEventListener('click', function() {
+				
         if (isZoomed) {
           img.style.width = origImgWidth + 'px';
           img.style.height = origImgHeight + 'px';
