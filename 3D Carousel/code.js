@@ -41,7 +41,7 @@ function checkScreenSize() {
   spin.style.height = imgHeight + "px";
   ground.style.width = radius * 3 + "px";
   ground.style.height = radius * 3 + "px";
-  if(initiation) init(0.2)
+  if(initiation) init(0.2);
 }
 
 checkScreenSize();
@@ -167,7 +167,5 @@ function zoomOnClick() {
     })(i);
   }
 }
-
-zoomOnClick();
 
 zoomOnClick();
