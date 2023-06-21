@@ -130,25 +130,20 @@ document.onmousewheel = function(e) {
 };
 
 function zoomOnClick() {
-  for (var i = 0; i < imgs.length; i++) {(function(index) {
+  var isImageZoomed = false;
+
+  for (var i = 0; i < imgs.length; i++) {
+    (function(index) {
       var img = imgs[index];
       var origImgWidth = img.offsetWidth;
       var origImgHeight = img.offsetHeight;
       var origImgLeft = img.offsetLeft;
       var origImgTop = img.offsetTop;
-      var isZoomed = false;
+      var NoSpin = false;
       var initialAutoRotate = autoRotate;
 
       img.addEventListener('click', function() {
-				
-        if (isZoomed) {
-          img.style.width = origImgWidth + 'px';
-          img.style.height = origImgHeight + 'px';
-          img.style.left = origImgLeft + 'px';
-          img.style.top = origImgTop + 'px';
-          autoRotate = initialAutoRotate;
-          spin.classList.remove('paused');
-        } else {
+        if (!isImageZoomed && !NoSpin) {
           img.style.transition = 'width 0.3s, height 0.3s, left 0.3s, top 0.3s';
           img.style.width = (origImgWidth + 70) + 'px';
           img.style.height = (origImgHeight + 100) + 'px';
@@ -156,12 +151,23 @@ function zoomOnClick() {
           img.style.top = (origImgTop - 100) + 'px';
           autoRotate = false;
           spin.classList.add('paused');
+          NoSpin = true;
+          isImageZoomed = true;
+        } else if (NoSpin) {
+          img.style.width = origImgWidth + 'px';
+          img.style.height = origImgHeight + 'px';
+          img.style.left = origImgLeft + 'px';
+          img.style.top = origImgTop + 'px';
+          autoRotate = initialAutoRotate;
+          spin.classList.remove('paused');
+          NoSpin = false;
+          isImageZoomed = false;
         }
-
-        isZoomed = !isZoomed;
       });
     })(i);
   }
 }
+
+zoomOnClick();
 
 zoomOnClick();
