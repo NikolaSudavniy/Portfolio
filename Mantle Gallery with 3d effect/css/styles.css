@@ -242,6 +242,16 @@ html{
 	display: none;
 }
 
+.copyright{
+	margin: 0 auto;
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: assasin-st, sans-serif;
+	font-size: 19px;
+}
+
 @keyframes k-light{
 	0%{
 		opacity: 0.2;

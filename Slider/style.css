@@ -95,3 +95,13 @@ button:focus {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+.copyright{
+	margin: 0 auto;
+	position: absolute;
+	bottom: 2%;
+	left: 12%;
+	transform: translateX(-12%);
+	font-family: 500 19px "Roboto", sans-serif;
+	color: #FFFFFF;
+}

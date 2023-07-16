@@ -53,3 +53,13 @@ body {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
+
+.copyright{
+	margin: 0 auto;
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 500 19px "Muli", sans-serif;
+	color: #FFFFFF;
+}

@@ -330,6 +330,16 @@ button:focus {
   transform-origin: left;
 }
 
+.copyright{
+	margin: 0 auto;
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 500 19px "Montserrat", sans-serif;
+	color: #FFFFFF;
+}
+
 @media only screen and (min-width: 800px) {
   :root {
     --card-width: 250px;
