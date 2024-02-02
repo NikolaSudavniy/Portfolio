@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Bohemian Buldogs",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Bohemian Buldogs",
+  "start_url": "https://nikolasudavniy.github.io/Portfolio/Bohemian%20Buldogs/index.html",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "imgs/favicon.png",
+      "type": "image/png",
+      "sizes": "36x33"
+    }
+  ],
+  "lang": "en"
+}
