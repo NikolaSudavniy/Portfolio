@@ -10,9 +10,9 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "imgs/favicon.png",
+      "src": "imgs/about_dog1.png",
       "type": "image/png",
-      "sizes": "36x33"
+      "sizes": "512x512"
     }
   ],
   "lang": "en"
