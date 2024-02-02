@@ -1,0 +1,23 @@
+{
+  "background_color": "#1c1c1c",
+  "description": "Gulp Project",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "3D-Tilt Bank Card",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "3D-Tilt",
+  "start_url": "/",
+  "theme_color": "#1c1c1c",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "images/dist/preview.jpg"
+    }
+  ],
+  "lang": "en"
+}
